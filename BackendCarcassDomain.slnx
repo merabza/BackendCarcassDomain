@@ -4,5 +4,8 @@
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
   </Folder>
+  <Folder Name="/SystemTools/">
+    <Project Path="../SystemTools/SystemTools.SharedKernel/SystemTools.SharedKernel.csproj" />
+  </Folder>
   <Project Path="BackendCarcassDomain.Entities/BackendCarcassDomain.Entities.csproj" />
 </Solution>
