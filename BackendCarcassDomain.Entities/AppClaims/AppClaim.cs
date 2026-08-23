@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using SystemTools.SharedKernel;
 
-namespace BackendCarcassDomain.Entities.Models;
+namespace BackendCarcassDomain.Entities.AppClaims;
 
-public sealed class AppClaim : IDataType, IMyEquatable
+public sealed class AppClaim : Entity, IDataType, IMyEquatable
 {
     //public static string DtKeyKey => nameof(AclId).CountDtKey();
 

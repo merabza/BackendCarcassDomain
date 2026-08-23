@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using BackendCarcassDomain.Entities.MenuItems;
+using SystemTools.SharedKernel;
 
-namespace BackendCarcassDomain.Entities.Models;
+namespace BackendCarcassDomain.Entities.MenuGroups;
 
 //მენიუს ჯგუფი
-public sealed class MenuGroup : IDataType, IMyEquatable
+public sealed class MenuGroup : Entity, IDataType, IMyEquatable
 {
     //public static string DtKeyKey => nameof(MengId).CountDtKey();
     public int MengId { get; set; }
@@ -21,7 +23,7 @@ public sealed class MenuGroup : IDataType, IMyEquatable
     public bool Hidden { get; set; }
 
     // ReSharper disable once CollectionNeverUpdated.Global
-    public ICollection<MenuItm> Menu { get; set; } = new HashSet<MenuItm>();
+    public ICollection<MenuItem> Menu { get; set; } = new HashSet<MenuItem>();
 
     [NotMapped]
     public int Id

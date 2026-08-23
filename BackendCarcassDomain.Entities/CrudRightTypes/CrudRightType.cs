@@ -1,13 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using SystemTools.SharedKernel;
 
-namespace BackendCarcassDomain.Entities.Models;
+namespace BackendCarcassDomain.Entities.CrudRightTypes;
 
 //ეს კლასი არის მონაცემთა ბაზაში ინფორმაციის ცვლილების შესაბამისი ოპერაციების ცხრილის ჩანაწერის მოდელი
 //ცხრილი გამოიყენება ბაზაში ინფორმაციის ცვლილების უფლებების ტიპების სახელების შესანახად.
 //ეს შეიძლება იყოს დამატება, რედაქტირება, წაშლა, დადასტურება
 //ნახვა აქ არ მოხვდება, რადგან თუ ცხრილზე ან სხვა ტიპის ინფორმაციაზე უფლება არსებობს,
 //  ეს უკვე ნიშნავს, რომ ნახვის უფლება არსებობს
-public sealed class CrudRightType : IDataType, IMyEquatable
+public sealed class CrudRightType : Entity, IDataType, IMyEquatable
 {
     //public static string DtKeyKey => nameof(CrtId).CountDtKey();
 

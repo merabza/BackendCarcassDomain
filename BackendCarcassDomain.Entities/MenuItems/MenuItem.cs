@@ -1,10 +1,12 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
+using BackendCarcassDomain.Entities.MenuGroups;
+using SystemTools.SharedKernel;
 
-namespace BackendCarcassDomain.Entities.Models;
+namespace BackendCarcassDomain.Entities.MenuItems;
 
 //მენიუს ელემენტი
-public sealed class MenuItm : IDataType, IMyEquatable
+public sealed class MenuItem : Entity, IDataType, IMyEquatable
 {
     public int MenId { get; set; }
 
@@ -48,7 +50,7 @@ public sealed class MenuItm : IDataType, IMyEquatable
 
     public bool UpdateTo(IDataType data)
     {
-        if (data is not MenuItm newData)
+        if (data is not MenuItem newData)
         {
             return false;
         }
@@ -80,7 +82,7 @@ public sealed class MenuItm : IDataType, IMyEquatable
 
     public bool EqualsTo(IDataType data)
     {
-        if (data is not MenuItm other)
+        if (data is not MenuItem other)
         {
             return false;
         }

@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using BackendCarcassDomain.Entities.ManyToManyJoins;
+using SystemTools.SharedKernel;
 
-namespace BackendCarcassDomain.Entities.Models;
+namespace BackendCarcassDomain.Entities.DataTypes;
 
 //მონაცემთა ტიპი
-public sealed class DataType : IDataType, IMyEquatable
+public sealed class DataType : Entity, IDataType, IMyEquatable
 {
     //public static string DtKeyKey => nameof(DtId).CountDtKey();
 

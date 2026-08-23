@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using SystemTools.SharedKernel;
 
-namespace BackendCarcassDomain.Entities.Models;
+namespace BackendCarcassDomain.Entities.Roles;
 
 //როლი
-public sealed class Role : IDataType, IMyEquatable
+public sealed class Role : Entity, IDataType, IMyEquatable
 {
     //public static string DtKeyKey => nameof(RolId).CountDtKey();
 

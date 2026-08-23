@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using SystemTools.SharedKernel;
 
-namespace BackendCarcassDomain.Entities.Models;
+namespace BackendCarcassDomain.Entities.Users;
 
 //მომხმარებელი
-public sealed class User : IDataType
+public sealed class User : Entity, IDataType
 {
     public int UsrId { get; set; }
 

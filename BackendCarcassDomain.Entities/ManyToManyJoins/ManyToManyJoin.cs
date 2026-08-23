@@ -1,8 +1,10 @@
 ﻿using System;
+using BackendCarcassDomain.Entities.DataTypes;
+using SystemTools.SharedKernel;
 
-namespace BackendCarcassDomain.Entities.Models;
+namespace BackendCarcassDomain.Entities.ManyToManyJoins;
 
-public sealed class ManyToManyJoin
+public sealed class ManyToManyJoin : Entity
 {
     public int MmjId { get; init; }
     public int PtId { get; init; }
